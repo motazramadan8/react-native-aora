@@ -1,36 +1,14 @@
-import { View, Image, Text } from "react-native";
 import { Tabs } from "expo-router";
 import { icons } from "../../constants";
 import React from "react";
-import { ITabIcon } from "@/interfaces";
 import { tabsContent } from "@/data";
-
-const TabIcon = ({ icon, color, focused, name }: ITabIcon) => {
-  return (
-    <View className="items-center justify-center gap-2">
-      <Image
-        source={icon}
-        resizeMode="contain"
-        tintColor={color}
-        className="w-6 h-6"
-      />
-      <Text
-        className={`${
-          focused ? "font-psemibold" : "font-pregular"
-        } text-xs text-gray-100`}
-        style={{ color }}
-      >
-        {name}
-      </Text>
-    </View>
-  );
-};
+import TabIcon from "@/components/TabIcon";
 
 const TabsLayout = () => {
   /* --------- RENDER --------- */
-  const renderTabs = tabsContent.map((element, index) => (
+  const renderTabs = tabsContent.map((element, idx) => (
     <Tabs.Screen
-      key={index}
+      key={idx}
       name={element.name}
       options={{
         title: element.title,

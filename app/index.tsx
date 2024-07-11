@@ -2,7 +2,7 @@
 
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { Redirect, router } from "expo-router";
+import { router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Image, ScrollView, Text, View } from "react-native";
 import { images } from "../constants";

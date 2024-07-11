@@ -1,11 +1,10 @@
 import { Text, TouchableOpacity } from "react-native";
 import React from "react";
-import { isLoading } from "expo-font";
 
 interface IProps {
   title: string;
   handlePress: () => void;
-  width: "w-full" | "w-fit";
+  width?: "w-full" | "w-fit";
   isLoading?: boolean;
   containerStyles?: string;
   textStyles?: string;
